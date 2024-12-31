@@ -489,7 +489,7 @@ void cv1k_state::cv1k(machine_config &config)
 	screen.set_refresh(HZ_TO_ATTOSECONDS(60.024)); // measured from ibara PCB rates - 60.024Hz, 262 total lines
 	screen.set_vblank_time(ATTOSECONDS_IN_USEC(0));
 	screen.set_size(512, 512);
-	screen.set_visarea(0, 320-1, 0, 240-1);
+	screen.set_visarea(-32, 352-1, -32, 272-1);
 	screen.set_screen_update(FUNC(cv1k_state::screen_update));
 
 	SPEAKER(config, "mono").front_center();
